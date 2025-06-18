@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santutu // El Círculo del Gran Apostador</title>
+    <meta name="description" content="Bienvenido al círculo de Santutu. Únete a los directos para presenciar apuestas de alto calibre, estrategias de tragamonedas de alta volatilidad y la búsqueda de botes legendarios con una comunidad inigualable.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="canonical" href="https://santutu-streamer.com/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bg: #FDFDFD; /* Off-White */
+            --surface: #FFFFFF;
+            --primary: #0A0A0A; /* Black */
+            --secondary: #525252;
+            --accent: #B91C1C; /* Deep Red */
+            --border: #E5E5E5;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Work+Sans:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: var(--bg); 
+            color: var(--primary); 
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Lora', serif;
+            font-weight: 700;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
+        }
+        .btn:hover {
+            background-color: var(--primary);
+            color: var(--surface);
+        }
+        .btn-accent {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .btn-accent:hover {
+            background-color: var(--accent);
+            color: var(--surface);
+        }
+
+        .section { padding: 6rem 1.5rem; }
+        .container { max-width: 1200px; margin: auto; }
+        
+        .header {
+            padding: 1rem 1.5rem;
+            background-color: rgba(253, 253, 253, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .hero {
+            padding: 6rem 1.5rem;
+        }
+        .hero h1 {
+            font-size: 6rem;
+            line-height: 1;
+            letter-spacing: -0.05em;
+        }
+        .hero .highlight { color: var(--accent); }
+        .hero p {
+            margin-top: 1.5rem;
+            font-size: 1.25rem;
+            color: var(--secondary);
+            max-w: 550px;
+            line-height: 1.7;
+        }
+        
+        .stream-embed-container {
+             border: 1px solid var(--border);
+             padding: 1rem;
+             background-color: var(--surface);
+             box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        .section-subtitle {
+             font-size: 1.125rem;
+             color: var(--secondary);
+             max-w-2xl;
+             line-height: 1.7;
+             margin-bottom: 4rem;
+        }
+        
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .philosophy-card {
+            padding: 2.5rem;
+        }
+        .philosophy-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .philosophy-card p {
+            color: var(--secondary);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .casino-card {
+            padding: 2.5rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .casino-card h4 { font-size: 2.5rem; line-height: 1.1; }
+        .casino-card .bonus {
+             font-family: 'Work Sans', sans-serif;
+             font-weight: 700;
+             font-size: 1.5rem;
+             color: var(--accent);
+             margin: 1rem 0;
+        }
+        .casino-card .desc {
+            color: var(--secondary);
+            flex-grow: 1;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .slot-card {
+            position: relative;
+            overflow: hidden;
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+        }
+        .slot-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .slot-card:hover img {
+            transform: scale(1.05);
+        }
+        .slot-card .overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+        }
+         .slot-card h4 { font-size: 2rem; color: #fff;}
+         .slot-card p {
+            color: #ccc;
+            margin-top: 0.5rem;
+         }
+
+        footer {
+            background-color: var(--surface);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50">
+        <div class="container flex justify-between items-center">
+            <a href="#" class="font-heading text-3xl tracking-wider">SANTUTU</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-secondary hover:text-primary transition-colors font-bold">Nuestra Misión</a>
+                <a href="#casinos" class="text-secondary hover:text-primary transition-colors font-bold">Casinos</a>
+                <a href="#slots" class="text-secondary hover:text-primary transition-colors font-bold">Tragamonedas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                     <img src="./img/santutu.png" alt="Santutu Logo" class="w-24 h-24 rounded-full mb-6 mx-auto lg:mx-0">
+                    <h1 class="font-serif">Santutu</h1>
+                    <p>
+                       Bienvenido al punto de encuentro para los verdaderos aficionados del casino. Este no es solo un canal de streaming; es un club exclusivo donde la estrategia, la energía y una comunidad increíble se unen para redefinir el juego. Aquí, cada giro es una oportunidad y cada victoria es una celebración compartida.
+                    </p>
+                    <a href="https://santutu-streamer.com/" target="_blank" rel="noopener" class="btn mt-8">Ver Directo en Kick</a>
+                </div>
+                <div class="stream-embed-container">
+                    <iframe 
+                        title="Santutu Kick Stream" 
+                        src="https://kick.com/santutu?autoplay=true&muted=true" 
+                        class="w-full h-auto aspect-video"
+                        frameborder="0" 
+                        scrolling="no"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="section bg-surface">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">La Misión: <span class="text-accent">Más Allá del Juego</span></h2>
+                    <p class="section-subtitle">En un panorama saturado, nuestro enfoque es claro y se basa en tres pilares fundamentales que nos distinguen. No se trata de girar rodillos al azar; se trata de construir una experiencia completa, valiosa y, sobre todo, entretenida y segura para nuestra comunidad. Es una dedicación a la excelencia que se refleja en cada aspecto de nuestras transmisiones.</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-px mt-16 bg-border">
+                    <div class="card philosophy-card">
+                        <h3 class="font-heading">Comunidad y Autenticidad</h3>
+                        <p>El alma de cada directo es la energía genuina y una comunidad que se siente como una familia. Aquí no hay lugar para reacciones exageradas ni negatividad. Lo que presencias es 100% real: la euforia de un <strong>gran premio</strong>, la tensión de una apuesta arriesgada y la camaradería de un chat que comparte cada momento con Santutu. Hemos construido un refugio donde todos son bienvenidos para celebrar, aprender y, lo más importante, disfrutar del juego en un ambiente de respeto y positividad. Cada espectador es una parte vital de este espectáculo. Fomentamos un diálogo abierto, donde las preguntas son bienvenidas y las victorias, sin importar el tamaño, son de todos.</p>
+                    </div>
+                    <div class="card philosophy-card">
+                        <h3 class="font-heading">Estrategia y Volatilidad</h3>
+                        <p>No estamos aquí para buscar ganancias mínimas. Nuestra misión es dominar las tragamonedas de <strong>alta volatilidad</strong>. Comprendemos y abrazamos el riesgo inherente porque sabemos que en la volatilidad se esconde el verdadero potencial para obtener premios que marcan la diferencia. Analizamos meticulosamente cada slot, su <strong>RTP (Retorno al Jugador)</strong>, y la mecánica de sus bonificaciones. Buscamos juegos con el potencial de generar multiplicadores masivos y rondas de <strong>giros gratis</strong> explosivas. Es una estrategia de alto riesgo y alta recompensa, diseñada para quienes entienden que para ganar en grande, se necesita audacia y una estrategia bien definida. Cada sesión es una demostración de cómo navegar estas aguas peligrosas con inteligencia.</p>
+                    </div>
+                     <div class="card philosophy-card">
+                        <h3 class="font-heading">Juego Inteligente y Transparente</h3>
+                        <p>Cada sesión en directo es una clase magistral abierta para todos. Santutu no se limita a jugar; comparte activamente su proceso de toma de decisiones, sus tácticas de <strong>gestión de bankroll</strong> y un análisis detallado de por qué elige ciertas apuestas en momentos clave. Discutimos la importancia de saber cuándo ser agresivo y cuándo es prudente retirarse, y cómo leer las "señales" que un juego puede dar. Este enfoque transparente tiene como objetivo educar a nuestra comunidad, transformando a los espectadores en jugadores más informados y conscientes, capaces de tomar decisiones más inteligentes y responsables con su propio capital de juego.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="casinos" class="section">
+            <div class="container">
+                <h2 class="section-title">Casinos de <span class="text-accent">Máxima Confianza</span></h2>
+                <p class="section-subtitle">La seguridad y la confianza son los cimientos de todo lo que hacemos. Las plataformas que recomendamos a continuación no son simples socios comerciales; son los casinos que han superado nuestras pruebas más rigurosas y se han ganado nuestra confianza. Hemos verificado exhaustivamente sus licencias, la imparcialidad de su software (RNG), la eficacia de su servicio de atención al cliente y, lo que es más importante, la rapidez y fiabilidad de sus procesos de pago. Al unirte a estos sitios a través de nuestros enlaces, no solo aseguras los mejores bonos de bienvenida disponibles, sino también la invaluable tranquilidad de saber que estás jugando en un entorno seguro, justo y de primera clase.</p>
+                <div id="casino-grid" class="grid md:grid-cols-3 gap-8">
+                    <!-- Casinos will be injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="slots" class="section bg-surface">
+             <div class="container">
+                <h2 class="section-title">Tragamonedas <span class="text-accent">Legendarias</span></h2>
+                <p class="section-subtitle">Estas no son simples tragamonedas; son las arenas donde hemos forjado nuestras victorias más memorables. Cada uno de estos títulos ha sido el protagonista de momentos inolvidables y ganancias masivas durante las transmisiones, consolidándose como favoritos indiscutibles de nuestra comunidad. Descubre por qué estas máquinas son legendarias y por qué volvemos a ellas en busca de gloria.</p>
+                <div id="slot-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                    <!-- Slot wins will be injected by JavaScript -->
+                </div>
+             </div>
+        </section>
+        
+    </main>
+    
+    <footer class="py-12">
+        <div class="container text-center text-secondary">
+             <div class="flex justify-center space-x-6 text-2xl mb-8">
+                <a href="https://kick.com/santutu" target="_blank" rel="noopener" class="hover:text-primary transition-colors" title="Kick"><i class="fa-brands fa-kickstarter-k"></i></a>
+                <a href="https://www.twitch.tv/santutu" target="_blank" rel="noopener" class="hover:text-primary transition-colors" title="Twitch"><i class="fab fa-twitch"></i></a>
+                <a href="https://www.youtube.com/@Santutu" target="_blank" rel="noopener" class="hover:text-primary" title="YouTube"><i class="fab fa-youtube"></i></a>
+                 <a href="https://www.instagram.com/santutuu/" target="_blank" rel="noopener" class="hover:text-primary transition-colors" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="text-sm max-w-3xl mx-auto">Todo el contenido de este sitio web y de las transmisiones en vivo es únicamente con fines de entretenimiento. El juego implica un riesgo financiero significativo y puede crear adicción. Juegue de forma responsable y apueste únicamente el dinero que pueda permitirse perder. Debe ser mayor de 18 años para participar.</p>
+            <p class="mt-4 text-xs opacity-50 font-heading">© 2025 // SANTUTU</p>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // --- DATA ---
+    const casinos = [
+        { name: 'NV Casino', bonus: '2000€ + 225 Giros Gratis', desc: 'La elección de élite para jugadores serios. NV Casino ofrece uno de los paquetes de bienvenida más potentes del mercado, combinado con una biblioteca de juegos casi infinita de los mejores proveedores. Su reputación se basa en pagos ultrarrápidos y un trato profesional, lo que lo convierte en nuestro principal campo de batalla.', link: 'https://santutu-streamer.com/' },
+        { name: 'Vincispin', bonus: '500€ + 350 Giros Gratis', desc: 'El favorito de la comunidad por su diseño intuitivo y su increíblemente generoso paquete de giros gratis. Es la plataforma perfecta para explorar nuevas tragamonedas y construir un bankroll inicial. Su programa de lealtad recompensa de verdad a los jugadores activos, añadiendo valor a cada sesión.', link: 'https://santutu-streamer.com/' },
+        { name: 'Bethall', bonus: '500€ + 200 Giros Gratis', desc: 'El sinónimo de seguridad y confianza en el sector. Bethall es para aquellos que valoran la tranquilidad por encima de todo. Ofrecen un soporte al cliente de primera clase que resuelve problemas de verdad, y una plataforma estable que garantiza una experiencia de juego justa y sin sorpresas.', link: 'https://santutu-streamer.com/' }
+    ];
+    
+    const slots = [
+        { img: './img/santutu-gitesofolimpus.webp', title: 'Gates of Olympus', desc: 'El trono de los dioses del RNG. Este slot es una leyenda por una razón: su potencial para lanzar multiplicadores masivos de la nada es inigualable. Cada giro es una plegaria a Zeus, esperando la tormenta de pagos que puede cambiarlo todo.' },
+        { img: './img/santutu-marlinmaster.webp', title: 'Marlin Masters', desc: 'Una aventura de pesca de alta mar donde las capturas son enormes. La emoción de coleccionar los Marlins para activar la ronda de bonificación con multiplicadores crecientes mantiene a toda la comunidad al borde de su asiento. ¡Una verdadera joya!' },
+        { img: './img/santutu-psineofplinko2.webp', title: 'Plinko', desc: 'La belleza de la simplicidad caótica. Ver caer la bola y rebotar hacia un gran multiplicador es una de las experiencias más puras y emocionantes del casino. Es un favorito del stream por su acción constante y su potencial para ganancias rápidas e impactantes.' }
+    ];
+    
+    // --- DYNAMIC CONTENT INJECTION ---
+    const casinoGrid = document.getElementById('casino-grid');
+    if(casinoGrid) {
+        casinoGrid.innerHTML = casinos.map(c => `
+            <div class="card casino-card">
+                <h4 class="font-heading">${c.name}</h4>
+                <p class="bonus">${c.bonus}</p>
+                <p class="desc">${c.desc}</p>
+                <a href="${c.link}" target="_blank" rel="noopener" class="btn btn-accent mt-6">Reclamar Bono</a>
+            </div>
+        `).join('');
+    }
+    
+    const slotGrid = document.getElementById('slot-grid');
+    if(slotGrid) {
+        slotGrid.innerHTML = slots.map(w => `
+            <div class="slot-card">
+                <img src="${w.img}" alt="${w.title}">
+                <div class="overlay">
+                    <h4 class="font-heading">${w.title}</h4>
+                    <p>${w.desc}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+});
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</body>
+</html>
